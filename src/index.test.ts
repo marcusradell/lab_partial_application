@@ -4,6 +4,14 @@ test("Lab 0: Basics", async () => {
   expect(result).toEqual({ name: "Shovel" });
 });
 
+test("Lab 0.1: Constructor", () => {
+  const { getAllItems } = new ItemStore();
+
+  const result = getAllItems();
+
+  expect(result).toEqual([{ name: "Shovel" }]);
+});
+
 test("Lab 1: Factory function", () => {
   const getAllItems = createGetAllItems();
 
